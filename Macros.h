@@ -1,10 +1,14 @@
 #ifndef _MACROS_h
 #define _MACROS_h
 
+#include "Arduino.h"
+#include "LibraryClass.h"
+#include <JeeLib.h>
+
 /*
 * MARCOS
 */
-#define DELAY_FUNC delay
+#define DELAY_FUNC Sleepy::loseSomeTime
 
 // Define where debug output will be printed.
 #ifdef DEBUG_PRINTER
@@ -51,10 +55,10 @@ inline byte getNextWord(const char *str, byte startIndex, char* output, byte max
 	return startIndex;
 }*/
 
-inline unsigned int smoothAnalogRead(byte pin, byte reads = 5)
+inline unsigned int smoothAnalogRead(uint8_t pin, uint8_t reads = 5)
 {
 	unsigned int value = 0;
-	for (byte i = 0; i < reads; i++)
+	for (uint8_t i = 0; i < reads; i++)
 	{
 		value += analogRead(pin);
 	}

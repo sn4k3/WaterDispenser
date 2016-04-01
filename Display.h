@@ -10,8 +10,7 @@
 #endif
 
 #include <LiquidCrystal_I2C.h>
-#include "Macros.h"
-#include "LibraryClass.h"
+#include "Config.h"
 
 class DisplayClass : LibraryClass
 {
@@ -21,7 +20,7 @@ class DisplayClass : LibraryClass
  public:
 	void init();
 	void loop();
-
+	void goSleep();
 	/*!
 	@function
 	@abstract   Sets the pin to control the backlight.
@@ -39,7 +38,7 @@ class DisplayClass : LibraryClass
 	BACKLIGHT_OFF will be interpreted as off and BACKLIGHT_ON will drive the
 	backlight on.
 	*/
-	void setBackLight(uint8_t value) const;
+	void setBackLight(bool value) const;
 
 	/*!
 	@function
@@ -66,7 +65,7 @@ class DisplayClass : LibraryClass
 	and the backlight. This method has the same effect of calling display and
 	backlight. @see display, @see backlight
 	*/
-	void on() const;
+	void on();
 
 	/*!
 	@function
@@ -75,7 +74,7 @@ class DisplayClass : LibraryClass
 	and the backlight. This method has the same effect of calling noDisplay and
 	noBacklight. @see display, @see backlight
 	*/
-	void off() const;
+	void off();
 };
 
 extern DisplayClass Display;

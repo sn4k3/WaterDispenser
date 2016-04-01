@@ -74,7 +74,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs;D:\Tiago\Dropbox\Programming\Arduino\WaterDispenser;D:\Tiago\Dropbox\Programming\Arduino\libraries\NewliquidCrystal;D:\Tiago\Dropbox\Programming\Arduino\libraries\NewliquidCrystal\utility;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire\utility;C:\Program Files (x86)\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\m2155emf.0a1\Micro Platforms\default\debuggers;D:\Tiago\Dropbox\Programming\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\tools\avr/avr/include/;C:\Program Files (x86)\Arduino\hardware\tools\avr//avr/include/avr/;C:\Program Files (x86)\Arduino\hardware\tools\avr/lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs;D:\Tiago\Dropbox\Programming\Arduino\WaterDispenser;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\EEPROM;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\EEPROM\utility;D:\Tiago\Dropbox\Programming\Arduino\libraries\JeeLib;D:\Tiago\Dropbox\Programming\Arduino\libraries\JeeLib\utility;D:\Tiago\Dropbox\Programming\Arduino\libraries\NewliquidCrystal;D:\Tiago\Dropbox\Programming\Arduino\libraries\NewliquidCrystal\utility;D:\Tiago\Dropbox\Programming\Arduino\libraries\NewPing;D:\Tiago\Dropbox\Programming\Arduino\libraries\NewPing\utility;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire\utility;C:\Program Files (x86)\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\brmlnjec.djm\Micro Platforms\default\debuggers;D:\Tiago\Dropbox\Programming\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\EEPROM;D:\Tiago\Dropbox\Programming\Arduino\libraries\JeeLib;D:\Tiago\Dropbox\Programming\Arduino\libraries\NewliquidCrystal;D:\Tiago\Dropbox\Programming\Arduino\libraries\NewPing;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\brmlnjec.djm\Micro Platforms\default\debuggers\VM_DBG;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire;C:\Program Files (x86)\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\brmlnjec.djm\Micro Platforms\default\debuggers;D:\Tiago\Dropbox\Programming\Arduino\libraries;D:\Tiago\Dropbox\Programming\Arduino\libraries\NewliquidCrystal\utility;C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire\utility;C:\Program Files (x86)\Arduino\hardware\tools\avr/avr/include/;C:\Program Files (x86)\Arduino\hardware\tools\avr//avr/include/avr/;C:\Program Files (x86)\Arduino\hardware\tools\avr/lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>D:\Tiago\Dropbox\Programming\Arduino\WaterDispenser\__vm\.WaterDispenser.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;_VMDEBUG=1;F_CPU=16000000L;ARDUINO=10605;ARDUINO_AVR_NANO;ARDUINO_ARCH_AVR;__cplusplus=201103L;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -119,20 +119,27 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Config.h" />
     <ClInclude Include="Display.h" />
     <ClInclude Include="LibraryClass.h" />
     <ClInclude Include="Macros.h" />
+    <ClInclude Include="Manager.h" />
+    <ClInclude Include="Ping.h" />
+    <ClInclude Include="SettingsConfig.h" />
     <ClInclude Include="__vm\.WaterDispenser.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Display.cpp" />
+    <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="Ping.cpp" />
+    <ClCompile Include="SettingsConfig.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties arduino.upload.port="COM3" />
+      <UserProperties arduino.upload.port="COM5" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

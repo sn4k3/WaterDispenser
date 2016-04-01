@@ -86,5 +86,6 @@ All values are not 100% correct (+/- mA)
 
 ###### Power Optimization
 
-Works with a transistor.<br>
-This sensor is only used when needed or when user perform an action, a transistor will be used to control power ON or OFF in order to spare power.
+Works great with a transistor.<br>
+This sensor is only used when needed or when user perform an action, a transistor will be used to control power ON or OFF in order to spare power.<br>
+Awake operation is almost instantaneous without requiring a preheat.
