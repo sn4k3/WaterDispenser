@@ -28,6 +28,11 @@ void ManagerClass::loop()
 
 void ManagerClass::awaketouch()
 {
+	if(isIdle())
+	{
+		awake();
+		return;
+	}
 	lastOperationTime = millis();
 }
 
@@ -55,6 +60,11 @@ bool ManagerClass::isSleeping()
 bool ManagerClass::isIdle()
 {
 	return state == STATE_IDLE;
+}
+
+bool ManagerClass::isRunning()
+{
+	return state == STATE_RUNNING;
 }
 
 bool ManagerClass::canStart()

@@ -65,9 +65,13 @@ extern "C" void __cxa_pure_virtual() {;}
 #define portInputRegister(P)
 #define portModeRegister(P)
 #include <..\WaterDispenser\WaterDispenser.ino>
+#include <..\WaterDispenser\BME280.cpp>
+#include <..\WaterDispenser\BME280.h>
 #include <..\WaterDispenser\Config.h>
 #include <..\WaterDispenser\Display.cpp>
 #include <..\WaterDispenser\Display.h>
+#include <..\WaterDispenser\Keypad.cpp>
+#include <..\WaterDispenser\Keypad.h>
 #include <..\WaterDispenser\LibraryClass.h>
 #include <..\WaterDispenser\Macros.h>
 #include <..\WaterDispenser\Manager.cpp>

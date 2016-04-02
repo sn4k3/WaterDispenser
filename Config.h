@@ -11,9 +11,11 @@
 #include "SettingsConfig.h"
 
 #define TIME_BEFORE_DEEPSLEEP 60000 // 1 Minute
+#define BME280_UPDATE_INTERVAL 5000 // 5 Seconds
 
 #define DEEP_SLEEP_IDLE 500
 #define IDLE_SLEEP_DELAY 50
+#define RUNNING_SLEEP_DELAY 0
 
 #define BUTTONS_ANALOG_PIN  A0
 #define LIGHTSENSOR_ANALOG_PIN  A1

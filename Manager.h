@@ -30,10 +30,11 @@ class ManagerClass
 	void awake();
 	bool isIdle();
 	bool isSleeping();
+	bool isRunning();
 	bool canStart();
 	bool canStop();
 	State *getState();
-
+	
 protected:
 	State state;
 	unsigned long lastOperationTime;

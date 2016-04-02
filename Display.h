@@ -14,10 +14,13 @@
 
 class DisplayClass : LibraryClass
 {
- protected:
-
-
- public:
+  public:
+	 enum State
+	 {
+		 STATE_IDLE,
+		 STATE_PUMPING,
+		 STATE_MENU
+	 };
 	void init();
 	void loop();
 	void goSleep();
@@ -75,6 +78,14 @@ class DisplayClass : LibraryClass
 	noBacklight. @see display, @see backlight
 	*/
 	void off();
+
+	void handleKey(char key);
+
+protected:
+	State state;
+
+	// Mililiters on display by user input
+	unsigned short mililiters;
 };
 
 extern DisplayClass Display;

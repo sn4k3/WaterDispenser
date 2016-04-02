@@ -23,7 +23,7 @@ void DisplayClass::init()
 
 void DisplayClass::loop()
 {
-
+	state = STATE_IDLE;
 }
 
 void DisplayClass::goSleep()
@@ -99,6 +99,11 @@ void DisplayClass::on()
 void DisplayClass::off()
 {
 	lcd.off();
+}
+
+void DisplayClass::handleKey(char key)
+{
+
 }
 
 DisplayClass Display;

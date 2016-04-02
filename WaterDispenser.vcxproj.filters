@@ -43,6 +43,12 @@
     <ClInclude Include="SettingsConfig.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BME280.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Keypad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Display.cpp">
@@ -55,6 +61,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SettingsConfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BME280.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Keypad.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

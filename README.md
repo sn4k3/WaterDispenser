@@ -81,7 +81,7 @@ void loop()
 Probe sensor VCC with a multimeter or a ampmeter.<br>
 All values are not 100% correct (+/- mA)
 
-1. **Active:** 8mA
+1. **Reading data:** 8mA
 1. **Idle:** 5.55mA
 
 ###### Power Optimization
@@ -89,3 +89,48 @@ All values are not 100% correct (+/- mA)
 Works great with a transistor.<br>
 This sensor is only used when needed or when user perform an action, a transistor will be used to control power ON or OFF in order to spare power.<br>
 Awake operation is almost instantaneous without requiring a preheat.
+
+
+
+## BME280
+
+Each option is based on a good initialized BME280 module.
+
+###### Code
+
+Upload this code and do the proper connections to the hardware.
+
+```cpp 
+void loop()
+{
+	// Active
+	Serial.println("Active");
+	lcd.clear();
+	BME280.update();
+	Serial.print(BME280.data.temperature);
+	Serial.print(" ");
+	Serial.print(BME280.data.humidity);
+	Serial.print(" ");
+	Serial.print(BME280.data.altitude);
+	Serial.print(" ");
+	Serial.println(BME280.data.pressure);
+	
+	// Idle
+	Serial.println("Idle");
+	delay(5000);
+}
+```
+
+###### Results
+
+Probe sensor GND with a multimeter or a ampmeter.<br>
+All values are not 100% correct (+/- uA)
+
+1. **Reading data:** 470uA
+1. **Idle:** 460uA
+
+###### Power Optimization
+
+This module uses a very low power sensors.<br>
+This kind of sensors require preheat time to give accurate reading, in this case and given the low power consuption will be always on.<br>
+Power libraries will take care of extra optimization over I2C ports.

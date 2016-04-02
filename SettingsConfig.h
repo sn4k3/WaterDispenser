@@ -18,6 +18,10 @@ struct SettingsStruct {
 	bool ledstrip;
 	bool buzzer;
 	bool laser;
+
+	unsigned long lastMillilitersServed;
+	unsigned long totalMillilitersServed;
+	unsigned long timesDispensed;
 };
 
 class SettingsConfigClass
